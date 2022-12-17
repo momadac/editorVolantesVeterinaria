@@ -1,0 +1,330 @@
+
+
+/*  csss grid */
+body {
+  background: #00B4DB;  
+background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  
+background: linear-gradient(to right, #0083B0, #00B4DB);
+  
+}
+
+
+
+.Slide {
+  width:'250px'; 
+  height:'200px';
+}
+
+.btn-primary {
+  background: #00B4DB !important;  /* fallback for old browsers */
+  border:none;
+}
+/* .btn:hover{
+  background: #00B4DB;
+}
+
+.btn:active{
+  background: #2bcdf1;
+} */
+/* body {
+  font-family: sans-serif;
+  background-color: brown;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background: #f5f5f5;
+} */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+
+
+.container {
+  max-width: 992px;
+  margin: 100px auto;
+  padding: 30px;
+  display: grid;
+  grid-template-areas: 
+  "header header "
+  "imagen inputs"
+  "controles controles"
+  "boton boton";
+    grid-template-rows: auto 4fr 2fr 2fr;
+    
+    
+
+
+
+
+}
+
+
+.container > * {
+
+  background-color: #FFF;
+  color: #ffff;
+  font-size: 20px;
+  /* padding: 20px; */
+  /* border: skyblue 1px solid; */
+  
+
+
+}
+
+header {
+  background: rgba(216, 13, 13, 0.5);
+  padding: 20px;
+  
+
+  grid-area: header;
+  
+}
+
+
+
+imagen {
+  
+  grid-area: imagen;
+  width:480px;
+    
+  
+  
+
+
+}
+
+
+inputs {
+  grid-area:inputs;
+  width:480px;
+  
+}
+
+controles{
+  background-color: steelblue;
+  grid-area: controles;
+}
+
+boton {
+ 
+  grid-area: boton;
+
+
+}
+
+.Noimagen {
+  height: 500px;
+  width: 500px;
+  background-image: url("../src/assets/noImage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+
+.contenedor-slider{
+  width:860px;
+  height:12rem;
+  margin: 0 auto;
+  
+}
+
+
+
+
+
+.estilo-Input{
+  max-width:90%;
+  font-size:1.2rem
+}
+
+
+
+
+.contenedor-Imagen {
+  width:100%;
+  overflow:"hidden";
+}
+
+
+
+p {
+
+  font-size:1rem
+}
+
+
+
+
+
+
+/*  */
+
+
+
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: chartreuse;
+}
+
+.carrousel {
+  width: 80%;
+  height: 50vh;
+}
+
+
+#print{ 
+  height: 480px;
+  margin:0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.input-range {
+  width:250px;
+  accent-color: #00B4DB;
+
+}
+
+
+.slick-prev:before,
+.slick-next:before {
+  color: #00B4DB;
+  width:500px;
+}
+
+
+
+
+@media (max-width:768px){ 
+
+
+  .container {
+    max-width: 550px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "imagen"
+    "inputs"
+    "controles"
+    "boton";
+      grid-template-rows: auto 2fr 2fr 2fr;
+      grid-template-columns: 1fr;
+      
+
+  
+  
+  
+  }
+
+  header {
+    max-width: 480px;
+    
+    overflow:hidden;
+
+
+  }
+
+  
+  .contenedor-slider{
+    width:450px;
+    height:12rem;
+    margin: 0 auto;
+    padding-left:10px;
+    padding-right: 10px;
+  }
+  
+  .slick-slider {
+    width:420px;
+  }
+  
+
+
+
+
+  
+
+
+
+}
+
+
+@media (min-width: 768px) and (max-width:992px){
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "imagen inputs"
+    "controles controles"
+    "boton boton";
+      grid-template-rows: auto 4fr 2fr 2fr;
+      
+  
+  
+  
+  
+  }
+
+  imagen {
+  
+    grid-area: imagen;
+    width:400px;
+      
+    
+    
+  
+  
+  }
+  
+  
+  inputs {
+    grid-area:inputs;
+    width:400px;
+    
+  }
+  
+  header {
+    width: 800px;
+  }
+
+
+  .contenedor-slider{
+    width:800px;
+    height:12rem;
+    margin: 0 auto;
+    padding-left:10px;
+    padding-right: 10px;
+  }
+  
+  .slick-slider {
+    width:730px;
+  }
+  
+
+
+  
+  
+  }
+
+
+@media (min-width: 992px) { 
+
+
+
+  
+
+
+}
