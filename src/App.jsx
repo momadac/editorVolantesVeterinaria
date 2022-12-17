@@ -13,10 +13,7 @@ import html2canvas from "html2canvas";
 
 
 function App() {
-// https://dev.to/juhanakristian/access-dom-element-in-a-child-component-in-react-3j4o
-
   const canvas = React.useRef()
-  
   const [urlFoto,seturlFoto] = useState();
   const [texto1, setTexto1] = useState();
   const [texto2, setTexto2] = useState();
