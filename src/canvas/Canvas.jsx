@@ -11,45 +11,29 @@ function Canvas() {
   const bindDivs = useDrag((params)=>{
     divPos.x.set(params.offset[0]);
     divPos.y.set(params.offset[1]);
-   
-   
-   
+
   });
 
 
    //bloquear el boton de agregar al llegar a las 4 palabras
   const bindDivs2 = useDrag((params)=>{
-   
+  
     divPos2.x.set(params.offset[0]);
     divPos2.y.set(params.offset[1]);
-   
+  
   });
   const canvas = useRef(null);
   const handleClick = (event, url, width, height) => {
- 
-    // divImagen.backgroundImage="url('https://i.imgflip.com/261o3j.jpg')";
-   const el = document.getElementById('print');
-   el.style.backgroundImage=`url(${url})`
-   
- 
 
-   console.log(el)
+  const el = document.getElementById('print');
+  el.style.backgroundImage=`url(${url})`
+
+
+  console.log(el)
     
   };
- 
 
   const handleImageDownload = async () => {
-    // const element = document.getElementById("print"),
-    //   canvas = await html2canvas(element),
-    //   data = canvas.toDataURL("image/jpg"),
-    //   link = document.createElement("a");
-
-    // link.href = data;
-    // link.download = "downloaded-image.jpg";
-
-    // document.body.appendChild(link);
-    // link.click();
-    // document.body.removeChild(link);
 
     html2canvas(document.querySelector("#print"), {
       allowTaint: true,
@@ -64,7 +48,6 @@ function Canvas() {
   };
 
   useEffect(() => {
-    console.log(imagenes);
   }, [imagenes]);
 
   useEffect(() => {
@@ -114,17 +97,8 @@ function Canvas() {
 
         </animated.div>
 
-
-
-
-      
-      
-      
-      
       </div>
       
-    
-
       <div className="carrousel">
         <Slider className="slider" {...settings}>
           {imagenes.map((imagen) => (

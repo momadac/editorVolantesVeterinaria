@@ -1,10 +1,5 @@
 import React, { useState , useContext } from "react";
-
 import { GeneralContext } from "../contexts/GeneralContext";
-
-
-
-
 // 
 //Helvetica
 //Roboto
@@ -37,10 +32,6 @@ const FontPicker = () => {
           
     <p className="mt-2">Fuente</p>
     <select className="form-select ml-3 h-100 mt-1" aria-label="Default select example" onChange={handleSelect}>
-      {/* <option selected>Open this select menu</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option> */}
       
     {fuentes.map( font =>
       

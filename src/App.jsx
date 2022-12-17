@@ -29,18 +29,6 @@ function App() {
 
 
   const handleImageDownload = async () => {
-    // const element = document.getElementById("print"),
-    //   canvas = await html2canvas(element),
-    //   data = canvas.toDataURL("image/jpg"),
-    //   link = document.createElement("a");
-
-    // link.href = data;
-    // link.download = "downloaded-image.jpg";
-
-    // document.body.appendChild(link);
-    // link.click();
-    // document.body.removeChild(link);
-
     html2canvas(canvas.current, {
       allowTaint: true,
       useCORS: true,
@@ -51,33 +39,24 @@ function App() {
       link.href = img;
       link.click();
     });
-   
   };
 
   return (
-
-    <GeneralContext.Provider value={ {texto1 , setTexto1 ,  texto2 , setTexto2 , urlFoto , seturlFoto , tamTexto1 , setTamTexto1 , colorTexto1 , setColorTexto1,
+    <GeneralContext.Provider value={ {texto1 , setTexto1 ,  texto2 , setTexto2 ,    urlFoto , seturlFoto , tamTexto1 , setTamTexto1 , colorTexto1 , setColorTexto1,
       bordeColorTexto1 , setbordeColorTexto1 ,colorTexto2 , setColorTexto2 , bordeColorTexto2 , setbordeColorTexto2, tipoFuente , setTipoFuente ,
       posIniPalabra1X , setPosIniPalabra1X ,posIniPalabra1Y , setPosIniPalabra1Y
-    }}>
+      }}>
 
-    <div className="container">
-       {/* <header> <Caroussel/></header> */}
+      <div className="container">
 
-
-        <imagen className="bg-light"><Imagen  ref={canvas} /></imagen>
-        
+        <imagen className="bg-light"><Imagen  ref={canvas} /></imagen>        
         <inputs className="bg-light text-dark"> 
-        <Input   />
-        <ImageUploader/>
-        <Boton  handleImageDownload={handleImageDownload} />
-        
-        
-        
-         </inputs>
-        
-      
-    </div>
+          <Input   />
+          <ImageUploader/>
+          <Boton  handleImageDownload={handleImageDownload} />       
+        </inputs>
+              
+      </div>
     </GeneralContext.Provider>
   );
 }

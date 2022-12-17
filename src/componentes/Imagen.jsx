@@ -6,41 +6,14 @@ import { motion , useMotionValue  } from "framer-motion"
 import noImage from "../assets/imagenes/noImage.jpg"
 
 const Imagen = React.forwardRef((props,ref)=> {
-  // const canvas = useRef(null);
-  
-
-
 
   const { texto1, setTexto1, texto2 ,  urlFoto , tamTexto1 ,  colorTexto1 ,bordeColorTexto1, setColorTexto1,
     tipoFuente , setTipoFuente , posIniPalabra1X , posIniPalabra1Y  } = useContext(GeneralContext);
   
 
-
-    
-
-  // const lineaTextoPos = useSpring({ x: 0, y: 0 });
-
-  // const bindlineaTextoPos = useDrag((params) => {
-  //   if(params.offset[0]<450  && params.offset[1] < 450 && params.offset[0] >0 ){
-  //       lineaTextoPos.x.set(params.offset[0]);
-  //       lineaTextoPos.y.set(params.offset[1]);
-
-  //   }
-    
-  
-  // });
-
-  // const lineaTextoPos2 = useSpring({ x: 0, y: 0 });
-  // const bindlineaTextoPos2 = useDrag((params) => {
-  //   lineaTextoPos2.x.set(params.offset[0]);
-  //   lineaTextoPos2.y.set(params.offset[1]);
-  // });
-
- 
   useEffect(() => {
     // refContenedorFoto.style.backgroundImage=`url(${urlFoto})`
-    
-   
+
     const el = document.getElementById("print");
 
     el.style.backgroundImage = `url(${urlFoto} )`;
@@ -60,7 +33,6 @@ const Imagen = React.forwardRef((props,ref)=> {
   return (
     <div  className="contenedor-Imagen"  style={{
       overflow:'hidden'
-      
     }}>
 
 {/* https://www.framer.com/docs/motionvalue/ */}
@@ -72,14 +44,13 @@ const Imagen = React.forwardRef((props,ref)=> {
 <motion.div  
         className="palabra1" 
           // {...bindlineaTextoPos2()}
-           style={{
-           position: "relative",
+          style={{
+          position: "relative",
           
             fontSize:`${tamTexto1}px`,
             color:`${colorTexto1}`,
             fontWeight: 'bold',
 
-            
             textShadow: `4px  4px  4px ${bordeColorTexto1}`
           }}
 
@@ -98,12 +69,12 @@ const Imagen = React.forwardRef((props,ref)=> {
           
         </motion.div>
 
-           <motion.div  
+          <motion.div  
         className="palabra2" 
           // {...bindlineaTextoPos2()}
-           style={{
-           position: "relative",
-       
+          style={{
+          position: "relative",
+
             fontSize:`${tamTexto1}px`,
             color:`${colorTexto1}`,
             fontWeight: 'bold',
@@ -127,17 +98,14 @@ const Imagen = React.forwardRef((props,ref)=> {
           
         </motion.div>
 
-
-        
-
 {/* 
         <motion.div className="palabra1" 
           // {...bindlineaTextoPos()}
           style={{
-             position: "relative",
-             x,
-             y,
-             
+            position: "relative",
+            x,
+            y,
+            
             fontSize:`${tamTexto1}px`,
             color:`${colorTexto1}`,
             fontWeight: 'bold',
@@ -158,11 +126,10 @@ const Imagen = React.forwardRef((props,ref)=> {
           dragMomentum= {false}
 
         >
-         <Font family={tipoFuente}> {texto1}</Font> 
+        <Font family={tipoFuente}> {texto1}</Font> 
       
         </motion.div> */}
 
-     
       </div>):(
         <div  id="print" >
 
