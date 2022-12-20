@@ -8,8 +8,6 @@ background: linear-gradient(to right, #0083B0, #00B4DB);
   
 }
 
-
-
 .Slide {
   width:'250px'; 
   height:'200px';
@@ -41,10 +39,6 @@ background: linear-gradient(to right, #0083B0, #00B4DB);
   margin: 0;
 }
 
-
-
-
-
 .container {
   max-width: 992px;
   margin: 100px auto;
@@ -56,14 +50,8 @@ background: linear-gradient(to right, #0083B0, #00B4DB);
   "controles controles"
   "boton boton";
     grid-template-rows: auto 4fr 2fr 2fr;
-    
-    
-
-
-
 
 }
-
 
 .container > * {
 
@@ -72,8 +60,6 @@ background: linear-gradient(to right, #0083B0, #00B4DB);
   font-size: 20px;
   /* padding: 20px; */
   /* border: skyblue 1px solid; */
-  
-
 
 }
 
@@ -86,17 +72,11 @@ header {
   
 }
 
-
-
 imagen {
   
   grid-area: imagen;
   width:480px;
-    
-  
-  
-
-
+  padding: 4%;
 }
 
 
@@ -112,7 +92,7 @@ controles{
 }
 
 boton {
- 
+
   grid-area: boton;
 
 
@@ -125,7 +105,6 @@ boton {
   background-repeat: no-repeat;
   background-size: cover;
 
-
 }
 
 .contenedor-slider{
@@ -135,40 +114,22 @@ boton {
   
 }
 
-
-
-
-
 .estilo-Input{
   max-width:90%;
   font-size:1.2rem
 }
-
-
-
 
 .contenedor-Imagen {
   width:100%;
   overflow:"hidden";
 }
 
-
-
 p {
 
   font-size:1rem
 }
 
-
-
-
-
-
 /*  */
-
-
-
-
 .App {
   font-family: sans-serif;
   text-align: center;
@@ -179,7 +140,6 @@ p {
   width: 80%;
   height: 50vh;
 }
-
 
 #print{ 
   height: 480px;
@@ -194,18 +154,29 @@ p {
 
 }
 
-
 .slick-prev:before,
 .slick-next:before {
   color: #00B4DB;
   width:500px;
 }
 
+.custom-file-button input[type=file] {
+  margin-left: -2px !important;
+}
 
+.custom-file-button input[type=file]::-webkit-file-upload-button {
+  display: none;
+}
 
+.custom-file-button input[type=file]::file-selector-button {
+  display: none;
+}
 
+.custom-file-button:hover label {
+  background-color: #dde0e3;
+  cursor: pointer;
+}
 @media (max-width:768px){ 
-
 
   .container {
     max-width: 550px;
@@ -219,11 +190,7 @@ p {
     "boton";
       grid-template-rows: auto 2fr 2fr 2fr;
       grid-template-columns: 1fr;
-      
 
-  
-  
-  
   }
 
   header {
@@ -231,9 +198,7 @@ p {
     
     overflow:hidden;
 
-
   }
-
   
   .contenedor-slider{
     width:450px;
@@ -248,15 +213,7 @@ p {
   }
   
 
-
-
-
-  
-
-
-
 }
-
 
 @media (min-width: 768px) and (max-width:992px){
 
@@ -271,35 +228,24 @@ p {
     "controles controles"
     "boton boton";
       grid-template-rows: auto 4fr 2fr 2fr;
-      
-  
-  
-  
-  
+
   }
 
   imagen {
   
     grid-area: imagen;
     width:400px;
-      
-    
-    
-  
-  
+
   }
-  
-  
+    
   inputs {
     grid-area:inputs;
     width:400px;
-    
-  }
+      }
   
   header {
     width: 800px;
   }
-
 
   .contenedor-slider{
     width:800px;
@@ -313,18 +259,8 @@ p {
     width:730px;
   }
   
-
-
-  
-  
   }
 
-
 @media (min-width: 992px) { 
-
-
-
-  
-
 
 }

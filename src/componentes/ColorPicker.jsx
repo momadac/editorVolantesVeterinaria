@@ -10,7 +10,6 @@ const Container = styled.span`
   max-width: 100%;
   padding: 14px 12px;
 
- 
 
   input[type="color"] {
     margin-right: 8px;
@@ -47,35 +46,19 @@ const ColorPicker = ({colTexto1,bordeTexto1, colTexto2 , bordeTexto2 }) => {
     
     const getColor = ()=> {
       let colorElegido = document.getElementById('colorr')
-  
-  
-
         setColorTexto1(colorElegido.value)
+  }
 
-
-    
-
-      
-      
-   }
-
-
-   const getBorde = ()=> {
+  const getBorde = ()=> {
     let colorElegido = document.getElementById('borde')
-
-    
       setbordeColorTexto1(colorElegido.value)
-
-    
-    
-    
- }
+  }
 
     return (
       <Container>
         <div>
           <div className="d-flex ml-3  justify-content-between ">
-            <p> Color Fuente:</p>
+            <p> Color fuente:</p>
 
             <div className="d-flex ml-2 h-100 mt-1">
               <input
@@ -89,7 +72,7 @@ const ColorPicker = ({colTexto1,bordeTexto1, colTexto2 , bordeTexto2 }) => {
           </div>
 
           <div className="d-flex ml-3  justify-content-between ">
-            <p> Color Borde:</p>
+            <p> Color borde:</p>
 
             <div className="d-flex ml-2 h-100 mt-1">
               <input
