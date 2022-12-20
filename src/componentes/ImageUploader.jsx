@@ -19,9 +19,10 @@ function ImageUploader() {
     };
 
     return (
-        <div className=" p-5">
-        <input type="file" className="btn btn-primary btn-lg btn-block" onChange={handleFileChange} />
-        
+        <div className="p-3">
+            <div class="input-group custom-file-button">
+            <input type="file" className="btn btn-primary btn-lg btn-block" id="inputGroupFile" onChange={handleFileChange} />
+        </div>
         {imageUrl && (
             <>
             <img src={imageUrl} alt="Selected image" />
