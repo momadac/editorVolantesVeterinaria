@@ -37,12 +37,12 @@ function Input() {
 
         <form>
         <div className="input-group mt-4 ml-4  estilo-Input">
-
+            <h1 className="ml-2">Crea tu volante:</h1>
             <div className="d-flex flex-column w-100">
-            <input type="text" className="form-control w-100" placeholder="Texto 1"   value={texto1} onChange={(e)=>{
+            <input type="text" className="form-control w-100" placeholder="aquí va el primer texto"   value={texto1} onChange={(e)=>{
             setTexto1(e.target.value)}} />
             
-            <input type="text" className="form-control mt-3" placeholder="Texto 2"   value={texto2} onChange={(e)=>{
+            <input type="text" className="form-control mt-3" placeholder="aquí el segundo si lo desea"   value={texto2} onChange={(e)=>{
             //  callback(e.target.value)
             setTexto2(e.target.value)}}/>
             </div>
