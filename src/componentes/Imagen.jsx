@@ -15,10 +15,10 @@ const Imagen = React.forwardRef((props,ref)=> {
     // refContenedorFoto.style.backgroundImage=`url(${urlFoto})`
 
     const el = document.getElementById("print");
-    
+
     el.style.backgroundImage = `url(${urlFoto} )`;
     el.style.backgroundSize = "contain";
-    el.style.backgroundRepeat = "space";
+    el.style.backgroundPosition = "center center";
     el.style.width = "auto";
     // x.set(0);
     // y.set(0);

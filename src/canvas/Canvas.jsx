@@ -26,13 +26,9 @@ function Canvas() {
   const handleClick = (event, url, width, height) => {
 
   const el = document.getElementById('print');
-  el.style.backgroundImage=`url(${url})`
-
-
-  console.log(el)
+  // el.style.backgroundImage=`url(${url})`
     
   };
-
   const handleImageDownload = async () => {
 
     html2canvas(document.querySelector("#print"), {
@@ -41,7 +37,7 @@ function Canvas() {
     }).then((canvas) => {
       var img = canvas.toDataURL("image/png");
       var link = document.createElement("a");
-      link.download = "Meme.jpg";
+      link.download = "volante.jpg";
       link.href = img;
       link.click();
     });
@@ -96,25 +92,8 @@ function Canvas() {
 
 
         </animated.div>
+      </div>
 
-      </div>
-      
-      <div className="carrousel">
-        <Slider className="slider" {...settings}>
-          {imagenes.map((imagen) => (
-            <div key={imagen.id}>
-              <img
-                src={imagen.url}
-                style={{ width: "100%", height: "10rem" }}
-                alt=""
-                onClick={(event) =>
-                  handleClick(event, imagen.url, imagen.width, imagen.height)
-                }
-              />
-            </div>
-          ))}
-        </Slider>
-      </div>
     </div>
   );
 }
