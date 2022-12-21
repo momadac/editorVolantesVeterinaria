@@ -72,7 +72,7 @@ const ColorPicker = ({colTexto1,bordeTexto1, colTexto2 , bordeTexto2 }) => {
           </div>
 
           <div className="d-flex ml-3  justify-content-between ">
-            <p> Color borde:</p>
+            <p> Color sombreado:</p>
 
             <div className="d-flex ml-2 h-100 mt-1">
               <input
