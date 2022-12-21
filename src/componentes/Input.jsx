@@ -5,6 +5,7 @@ import ColorPicker from '../componentes/ColorPicker';
 import FuenteTam from "../componentes/FuenteTam";
 import FontPicker from "../componentes/FontPicker"
 import { Fragment } from 'react';
+import FuenteTam2 from './FuenteTam2';
 
 function Input() {
 
@@ -52,7 +53,7 @@ function Input() {
             
         </div>
         <div className="input-group mt-3  ml-4  estilo-Input d-flex justify-content-evenly ">
-        <p>Tamaño fuente:</p> <div className="ml-2 mt-1 align-self-start " ><FuenteTam/></div>
+        <p>Tamaño fuente:</p> <div className="ml-2 mt-1 align-self-start " ><FuenteTam/><FuenteTam2/></div>
 
         </div>
 
