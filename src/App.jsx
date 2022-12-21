@@ -36,7 +36,7 @@ function App() {
     }).then((canvas) => {
       var img = canvas.toDataURL("image/png");
       var link = document.createElement("a");
-      link.download = "Meme.jpg";
+      link.download = "Volante.jpg";
       link.href = img;
       link.click();
     });
