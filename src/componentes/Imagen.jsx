@@ -7,7 +7,7 @@ import noImage from "../assets/imagenes/noImage.jpg"
 
 const Imagen = React.forwardRef((props,ref)=> {
 
-  const { texto1, setTexto1, texto2 ,  urlFoto , tamTexto1 ,  colorTexto1 ,bordeColorTexto1, setColorTexto1,
+  const { texto1, setTexto1, texto2 ,setTexto2, urlFoto , tamTexto1 , tamTexto2 , setTamTexto2 ,  colorTexto1 ,bordeColorTexto1, setColorTexto1,
     tipoFuente , setTipoFuente , posIniPalabra1X , posIniPalabra1Y  } = useContext(GeneralContext);
   
 
@@ -17,8 +17,9 @@ const Imagen = React.forwardRef((props,ref)=> {
     const el = document.getElementById("print");
 
     el.style.backgroundImage = `url(${urlFoto} )`;
-    el.style.backgroundSize = "100% 100%";
-    el.style.width = "480px";
+    el.style.backgroundSize = "contain";
+    el.style.backgroundPosition = "center center";
+    el.style.width = "auto";
     // x.set(0);
     // y.set(0);
     // xp2.set(0);
@@ -42,61 +43,61 @@ const Imagen = React.forwardRef((props,ref)=> {
       <div   id="print" ref={ref}>
 
 <motion.div  
-        className="palabra1" 
-          // {...bindlineaTextoPos2()}
-          style={{
-          position: "relative",
-          
-            fontSize:`${tamTexto1}px`,
-            color:`${colorTexto1}`,
-            fontWeight: 'bold',
+  className="palabra1" 
+    // {...bindlineaTextoPos2()}
+    style={{
+    position: "relative",
+    
+      fontSize:`${tamTexto1}px`,
+      color:`${colorTexto1}`,
+      fontWeight: 'bold',
 
-            textShadow: `4px  4px  4px ${bordeColorTexto1}`
-          }}
+      textShadow: `4px  4px  4px ${bordeColorTexto1}`
+    }}
 
-          drag
-          dragConstraints={{
-            
-            left: 0,
-            right:400 ,
-            bottom: 400,
-          }}
-          dragElastic={0}
-          dragMomentum= {false}
+    drag
+    dragConstraints={{
+      
+      left: 0,
+      right:430 ,
+      bottom: 600,
+    }}
+    dragElastic={0}
+    dragMomentum= {false}
 
-        >
-          <Font family={tipoFuente}> {texto1}</Font> 
-          
-        </motion.div>
+  >
+    <Font family={tipoFuente}> {texto1}</Font> 
+    
+</motion.div>
 
-          <motion.div  
-        className="palabra2" 
-          // {...bindlineaTextoPos2()}
-          style={{
-          position: "relative",
+<motion.div  
+  className="palabra2" 
+  // {...bindlineaTextoPos2()}
+  style={{
+  position: "relative",
 
-            fontSize:`${tamTexto1}px`,
-            color:`${colorTexto1}`,
-            fontWeight: 'bold',
+    fontSize:`${tamTexto2}px`,
+    color:`${colorTexto1}`,
+    fontWeight: 'bold',
 
-            
-            textShadow: `4px  4px  4px ${bordeColorTexto1}`
-          }}
+    
+    textShadow: `4px  4px  4px ${bordeColorTexto1}`
+  }}
 
-          drag
-          dragConstraints={{
-            
-            left: 0,
-            right:400 ,
-            bottom: 400,
-          }}
-          dragElastic={0}
-          dragMomentum= {false}
+  drag
+  dragConstraints={{
+    
+    left: 0,
+    right:430 ,
+    bottom: 600,
+  }}
+  dragElastic={0}
+  dragMomentum= {false}
 
-        >
-          <Font family={tipoFuente}> {texto2}</Font> 
-          
-        </motion.div>
+  >
+  <Font family={tipoFuente}> {texto2}</Font> 
+  
+</motion.div>
 
 {/* 
         <motion.div className="palabra1" 
@@ -143,7 +144,7 @@ const Imagen = React.forwardRef((props,ref)=> {
         }} >
 
         </div>
-        <p className="text-danger">No hay nada</p>
+        <p className="text-danger"></p>
         </div>
       )}
     

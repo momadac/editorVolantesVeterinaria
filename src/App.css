@@ -2,11 +2,9 @@
 
 /*  csss grid */
 body {
-  background: #00B4DB;  
-background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);  
-background: linear-gradient(to right, #0083B0, #00B4DB);
-  
-}
+  background: rgb(226,111,193);
+  background: linear-gradient(0deg, rgba(226,111,193,1) 1%, rgba(237,238,249,1) 4%, rgba(218,219,228,1) 32%, rgba(251,249,255,1) 74%, rgba(251,249,255,1) 96%);
+  }
 
 .Slide {
   width:'250px'; 
@@ -142,7 +140,7 @@ p {
 }
 
 #print{ 
-  height: 480px;
+  height: 600px;
   margin:0 auto;
   background-repeat: no-repeat;
   background-size: cover;
