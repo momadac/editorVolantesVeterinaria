@@ -18,6 +18,7 @@ function App() {
   const [texto1, setTexto1] = useState();
   const [texto2, setTexto2] = useState();
   const [tamTexto1, setTamTexto1] = useState(25);
+  const [tamTexto2, setTamTexto2] = useState(25);
   const [colorTexto1 , setColorTexto1] = useState("#FFFFFF");
   const [colorTexto2 , setColorTexto2] = useState("#FFFFFF");
   const [bordeColorTexto1, setbordeColorTexto1] = useState("#000000");
@@ -42,7 +43,7 @@ function App() {
   };
 
   return (
-    <GeneralContext.Provider value={ {texto1 , setTexto1 ,  texto2 , setTexto2 ,    urlFoto , seturlFoto , tamTexto1 , setTamTexto1 , colorTexto1 , setColorTexto1,
+    <GeneralContext.Provider value={ {texto1 , setTexto1 ,  texto2 , setTexto2 ,    urlFoto , seturlFoto , tamTexto1 , setTamTexto1 , tamTexto2 , setTamTexto2 , colorTexto1 , setColorTexto1,
       bordeColorTexto1 , setbordeColorTexto1 ,colorTexto2 , setColorTexto2 , bordeColorTexto2 , setbordeColorTexto2, tipoFuente , setTipoFuente ,
       posIniPalabra1X , setPosIniPalabra1X ,posIniPalabra1Y , setPosIniPalabra1Y
       }}>

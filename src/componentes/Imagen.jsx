@@ -59,8 +59,8 @@ const Imagen = React.forwardRef((props,ref)=> {
     dragConstraints={{
       
       left: 0,
-      right:400 ,
-      bottom: 400,
+      right:430 ,
+      bottom: 600,
     }}
     dragElastic={0}
     dragMomentum= {false}
@@ -88,8 +88,8 @@ const Imagen = React.forwardRef((props,ref)=> {
   dragConstraints={{
     
     left: 0,
-    right:400 ,
-    bottom: 400,
+    right:430 ,
+    bottom: 600,
   }}
   dragElastic={0}
   dragMomentum= {false}
@@ -144,7 +144,7 @@ const Imagen = React.forwardRef((props,ref)=> {
         }} >
 
         </div>
-        <p className="text-danger">No hay nada</p>
+        <p className="text-danger"></p>
         </div>
       )}
     
